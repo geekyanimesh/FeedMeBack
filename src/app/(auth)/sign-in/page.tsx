@@ -1,14 +1,23 @@
-import React from 'react'
+"use client"
 
-function page() {
+import { zodResolver } from "@hookform/resolvers/zod"
+import { useForm } from "react-hook-form"
+import * as z  from "zod"
+import Link from "next/link"
+import { useState } from "react"
+import { fa } from "zod/v4/locales"
+
+const page = () => {
+  const [username, setUsername] = useState('')
+  const [usernameMessage, setUsernameMessage] = useState('')
+  const [isCheckingUsername, setIsCheckingUsername] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   return (
     <div>
-      page
-      <br />
-      check
+      
     </div>
   )
 }
 
 export default page
-
